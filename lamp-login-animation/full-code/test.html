@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamp Login Animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./test.css" />
+  </head>
+  <body>
+    <main class="scene" id="scene">
+      <div class="ambient-light" id="ambient-light"></div>
+      <div class="firefly-layer" id="firefly-layer"></div>
+
+      <section class="lamp-area">
+        <div class="lamp" id="lamp">
+          <div class="bulb-glow"></div>
+          <div class="lamp-shade"></div>
+          <div class="lamp-beam"></div>
+          <div class="lamp-arm"></div>
+          <div class="lamp-foot"></div>
+          <div class="light-pool"></div>
+
+          <svg class="pull-cord" aria-hidden="true">
+            <path id="pull-cord-path" d="M 0 0 L 0 80"></path>
+          </svg>
+
+          <div
+            class="pull-handle"
+            id="pull-cord-handle"
+            aria-label="Pull lamp string"
+          ></div>
+        </div>
+      </section>
+
+      <section class="login-area">
+        <form class="glass-panel login-panel" id="login-form">
+          <div class="glass-highlight"></div>
+
+          <div class="form-heading">
+            <h2>Welcome Back</h2>
+            <p>Enter your details to access your account</p>
+          </div>
+
+          <div class="form-fields">
+            <label class="form-field">
+              <span
+                class="field-icon field-icon--user"
+                aria-hidden="true"
+              ></span>
+              <input
+                type="text"
+                placeholder="Username"
+                autocomplete="username"
+              />
+            </label>
+
+            <label class="form-field">
+              <span
+                class="field-icon field-icon--email"
+                aria-hidden="true"
+              ></span>
+              <input
+                type="email"
+                placeholder="Email Address"
+                autocomplete="email"
+              />
+            </label>
+
+            <label class="form-field">
+              <span
+                class="field-icon field-icon--password"
+                aria-hidden="true"
+              ></span>
+              <input
+                type="password"
+                placeholder="Password"
+                autocomplete="current-password"
+              />
+            </label>
+          </div>
+
+          <button class="submit-button" type="submit">Sign In</button>
+
+          <div class="social-divider">
+            <span></span>
+            <b>OR CONTINUE WITH</b>
+            <span></span>
+          </div>
+
+          <div class="social-buttons">
+            <button class="social-button" type="button">
+              <span class="social-icon--google">G</span> Google
+            </button>
+            <button class="social-button" type="button">
+              <span class="social-icon--github">●</span> GitHub
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="./test.js"></script>
+  </body>
+</html>

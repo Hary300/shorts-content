@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  overflow: hidden;
+  background: #050505;
+  transition: background-color 0.8s ease;
+}
+
+.firefly-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 15;
+  overflow: hidden;
+}
+
+.firefly {
+  position: absolute;
+  border-radius: 50%;
+  background: #ffea00;
+  box-shadow:
+    0 0 10px 3px rgba(255, 234, 0, 0.9),
+    0 0 20px rgba(255, 179, 0, 0.6);
+  animation: fireflyMove var(--duration) ease-in-out var(--delay) infinite
+    alternate;
+}
+
+@keyframes fireflyMove {
+  0% {
+    transform: translate(var(--x1), var(--y1));
+    opacity: 0.45;
+  }
+  25% {
+    transform: translate(var(--x2), var(--y2));
+    opacity: 1;
+  }
+  50% {
+    transform: translate(var(--x3), var(--y3));
+    opacity: 0.65;
+  }
+  75% {
+    transform: translate(var(--x4), var(--y4));
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x5), var(--y5));
+    opacity: 0.5;
+  }
+}
